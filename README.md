@@ -1,55 +1,30 @@
-# Mintlify Starter Kit
+# Essal legal center
 
-Use the starter kit to get your docs deployed and ready to customize.
+Mintlify source for Essal LLC (QFC 02195), operating as Essal and Essal Work. Connected project: `essallegal`. Intended custom domain: `legal.essal.it.com`.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Status
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+Version `2026-11-18-draft.1` is a review candidate, not an effective policy release or a claim of Paddle approval. The site must retain its draft banner and noindex while `release.json` is in draft mode. All ten planned routes are authored.
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+## Verification
 
-## AI-assisted writing
+Use Node.js 22.22 or newer and Mintlify CLI 4.3.51:
 
-Set up your AI coding tool to work with Mintlify:
-
-```bash
-npx skills add https://mintlify.com/docs
+```sh
+node scripts/check-release.mjs
+mint validate --format json
+mint broken-links --check-anchors --check-redirects
+mint dev --no-open
 ```
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+Run builds and browser verification sequentially on an 8 GB machine. Stop task-created preview servers and close test tabs after verification. Do not stop unrelated services.
 
-See the guides for [Claude Code](https://www.mintlify.com/docs/guides/claude-code), [Codex](https://www.mintlify.com/docs/guides/codex), [Cursor](https://www.mintlify.com/docs/guides/cursor), and [Devin Desktop](https://www.mintlify.com/docs/guides/devin-desktop) for tool-specific setup.
+## Effective release
 
-## Development
+Complete the evidence and reviews in `internal/launch-checklist.md`; record genuine approvals in `release.json`. Replace draft-only passages with verified operational facts, set the actual effective date, archive the exact published policies in `versions/<version>/`, remove the draft banner/noindex, run the release check and full validation, and then publish. Do not check approval boxes merely to make validation pass.
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+The public site excludes `internal/`, scripts and release metadata through `.mintignore`. The Git repository itself is public: never commit customer data, credentials, private licence certificates or security secrets.
 
-```
-npm i -g mint
-```
+## Marketing and application integration
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
-mint dev
-```
-
-View your local preview at `http://localhost:3000`.
-
-## Publishing changes
-
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+Companion changes are prepared separately in the Essal-Cloud and Essal-Admin repositories. Do not activate links that describe these drafts as effective customer policies. Before launch, verify clickable Terms, Privacy and Refunds links on every sales hostname, signup and billing screen; record versioned acceptance in the authoritative backend; and test the payment lifecycle in Paddle sandbox. Neither this repository nor a public DPA page records customer acceptance by itself.

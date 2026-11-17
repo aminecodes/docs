@@ -1,0 +1,38 @@
+---
+title: "Cookies and browser storage"
+description: "Understand Essal's language and region cookies, browser preferences, optional PostHog and Google Analytics, and how to control or withdraw consent."
+keywords: [cookies, analytics consent, PostHog, Google Analytics, storage]
+---
+
+Essal websites and applications use browser storage for preferences, account functions and, where you agree, optional analytics. This review draft describes confirmed settings and separates them from provider configurations that require deployment verification.
+
+## Essential functions and preferences
+
+Cookies are small values stored by a browser and sent with relevant requests. Local storage stays in the browser until removed by the site or user. Session storage normally lasts for the tab's session. Browser settings can block or remove these technologies, although blocking necessary account storage can prevent sign-in or other requested functions.
+
+The current marketing-site source defines:
+
+| Name | Type | Purpose | Configured duration |
+| --- | --- | --- | --- |
+| `essal_market` | First-party cookie | Remember the market selected by the visitor | 180 days from being set |
+| `essal_lang` | First-party cookie | Remember the visitor's selected language | 180 days from being set |
+| `essal_lang` | Local storage | Remember the language selection in the browser | Until removed or cleared; the current code has no automatic expiry |
+| `essal_theme` | Local storage | Remember the selected display theme | Until removed or cleared; the current code has no automatic expiry |
+
+These are marketing-site preferences, not an assertion that every Essal app uses identical keys. A stored preference may be reset when you change it. Preference-storage lifetimes do not authorise longer retention of personal information in analytics or backend records.
+
+Authenticated applications also need account/session safeguards. Their actual cookie names, lifetimes and deletion behavior must be disclosed for the deployed authentication configuration. The use of Better Auth software does not establish those values by itself.
+
+## Optional analytics
+
+Essal uses PostHog and Google Analytics for optional usage analytics. Essal has confirmed these tools are blocked until analytics consent. Optional tools must remain blocked when you reject analytics, and withdrawal must stop future optional collection. Necessary security and service operations may continue on a separate lawful basis.
+
+Choose or change the available analytics preference in the relevant website/app's consent controls. If you cannot find or use those controls, contact [legal@essal.it.com](mailto:legal@essal.it.com). Withdrawing consent is different from deleting historical analytics data; you may also request deletion where applicable.
+
+We do not list generic `_ga` or PostHog cookie durations as facts: identifiers and expiry depend on the live implementation. A deployment-specific inventory must identify the actual optional keys and durations before this policy is made effective.
+
+## Hosting, checkout and third-party services
+
+Hosting and network providers may use storage needed to deliver or protect a service. Paddle checkout has its own storage and privacy information. Opening a third-party service can bring its policies into scope; consent to Essal analytics is not blanket consent for unrelated providers.
+
+Learn more about personal data, retention, transfers and rights in the [privacy policy](/privacy). Contact legal with the domain, page and storage entry concerned if you have a question.

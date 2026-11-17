@@ -1,0 +1,15 @@
+{
+  "version": "2026-11-18-draft.1",
+  "mode": "draft",
+  "effectiveDate": null,
+  "approvals": {
+    "registeredOfficeVerified": false,
+    "contactsOperationallyVerified": false,
+    "providerEntitiesRegionsAndTransfersVerified": false,
+    "sixMonthRetentionAndBackupErasureVerified": false,
+    "analyticsConsentVerifiedInProduction": false,
+    "productSchedulesAndSecurityVerified": false,
+    "qfcLegalReviewComplete": false,
+    "ownerReleaseApproved": false
+  }
+}
