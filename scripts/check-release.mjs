@@ -26,12 +26,14 @@ if (release.mode === 'draft') {
   assert.equal(release.effectiveDate, null, 'A draft cannot have an effective date');
   assert.match(config.banner?.content ?? '', /draft.*not yet effective/i);
   assert.match(config.seo?.metatags?.robots ?? '', /noindex/);
+  pages.forEach(page => assert.match(page, /\nnoindex: true\n/, 'Exclude draft pages from search and assistant context'));
 } else {
   assert.equal(release.mode, 'effective');
   assert.match(release.effectiveDate ?? '', /^\d{4}-\d{2}-\d{2}$/);
   const pending = Object.entries(release.approvals).filter(([, value]) => value !== true).map(([key]) => key);
   assert.deepEqual(pending, [], `Release blocked: ${pending.join(', ')}`);
   for (const [i, page] of pages.entries()) {
+    assert(!/\nnoindex: true\n/.test(page), `${slugs[i]} is still excluded as a draft`);
     assert(!/review draft|not yet effective|must be completed|must be disclosed|before this policy is made effective/i.test(page), `${slugs[i]} still contains draft-only language`);
   }
   assert(!/draft/i.test(config.banner?.content ?? ''), 'Remove the draft banner at effective release');

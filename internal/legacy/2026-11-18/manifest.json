@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://legal.essal.cloud/terms",
+    "file": "terms.html",
+    "sha256": "18E4537BF413F96A5249A4C126F0F54437061ACDEC6E179E103A83D2401F95EE",
+    "fetchedUtc": "2026-11-17T23:21:45.8593375Z"
+  },
+  {
+    "url": "https://legal.essal.cloud/privacy",
+    "file": "privacy.html",
+    "sha256": "3598F8ED22A2F29F5A9B8324551E4350C0745CF7FB027EFBD47EE1B6CCA785E2",
+    "fetchedUtc": "2026-11-17T23:21:47.0591659Z"
+  },
+  {
+    "url": "https://legal.essal.cloud/refund-policy",
+    "file": "refund-policy.html",
+    "sha256": "511524B79922C702F306A956E51535FAE3F92C5BC9E34F008C94D8085DC5DFCF",
+    "fetchedUtc": "2026-11-17T23:21:48.1391600Z"
+  }
+]
