@@ -74,3 +74,11 @@ Read the actual legacy sitemap before activating aliases; add mappings for real 
 ## Final gate
 
 Obtain QFC-qualified legal review, factual product/operations signoff and owner's effective-release approval. Recheck the licence before its stated expiry. Submit actual checkout hostnames to Paddle with pricing, features, live policy links and enterprise pricing evidence. Domain acceptance is not guaranteed and this draft package is not a verification submission.
+
+## Build and domain evidence
+
+- Full Mintlify validation passed with zero errors/warnings. Internal-link, anchor and redirect validation passed. Accessibility CLI checks passed required color thresholds after palette correction; mobile Terms rendered at 390px without document overflow.
+- The owner-designated source is aminecodes/docs. Original starter commit: 90cd143. The replacement is a visibly labelled, noindex **review draft**, not an effective policy transition.
+- Cloudflare zone: essal.it.com, Essal account. Only hostname-scoped TXT verification and a DNS-only CNAME to cname.mintlify.builders were added. Mintlify reported hostname status active and SSL status active after TXT validation. No zone-wide security settings were changed.
+- The first deployment built its snapshot but failed final domain revalidation during DNS cutover. Retry and verify public content before reporting the draft site live.
+- Assistant must be disabled in the essallegal dashboard and verified on the public page. Removing the assistant from contextual.options is not sufficient to disable the platform assistant.

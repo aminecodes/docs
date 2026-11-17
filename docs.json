@@ -3,7 +3,7 @@
   "theme": "willow",
   "name": "Essal Legal Center",
   "description": "Agreements, privacy information and purchase policies for Essal LLC and Essal Work business software.",
-  "colors": { "primary": "#0052CC", "light": "#83B4FF", "dark": "#5377BA" },
+  "colors": { "primary": "#0052CC", "light": "#83B4FF", "dark": "#5174B5" },
   "appearance": { "default": "light", "strict": false },
   "logo": { "light": "/images/essal.svg", "dark": "/images/essal.svg", "href": "/" },
   "navigation": {
