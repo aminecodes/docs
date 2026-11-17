@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-18-draft.1",
-  "mode": "draft",
+  "version": "2026-11-18.1",
+  "mode": "published",
   "effectiveDate": null,
   "approvals": {
     "registeredOfficeVerified": false,
@@ -11,5 +11,8 @@
     "productSchedulesAndSecurityVerified": false,
     "qfcLegalReviewComplete": false,
     "ownerReleaseApproved": false
-  }
+  },
+  "publicationDate": "2026-11-18",
+  "presentationAuthorisedByOwner": true,
+  "legalReviewStatus": "pending"
 }

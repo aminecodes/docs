@@ -1,52 +1,162 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "maple",
   "name": "Essal Legal Center",
   "description": "Agreements, privacy information and purchase policies for Essal LLC and Essal Work business software.",
-  "colors": { "primary": "#0052CC", "light": "#83B4FF", "dark": "#5174B5" },
-  "appearance": { "default": "light", "strict": false },
-  "logo": { "light": "/images/essal.svg", "dark": "/images/essal.svg", "href": "/" },
+  "colors": {
+    "primary": "#0052CC",
+    "light": "#83B4FF",
+    "dark": "#5174B5"
+  },
+  "appearance": {
+    "default": "light",
+    "strict": false
+  },
+  "logo": {
+    "light": "/images/essal.svg",
+    "dark": "/images/essal.svg",
+    "href": "/"
+  },
   "navigation": {
     "groups": [
-      { "group": "Legal center", "pages": ["index"] },
-      { "group": "Agreements", "pages": ["terms", "refunds", "acceptable-use"] },
-      { "group": "Privacy and data", "pages": ["privacy", "cookies", "data-processing", "subprocessors"] },
-      { "group": "Help and versions", "pages": ["complaints", "changes"] }
+      {
+        "group": "Legal center",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "group": "Agreements",
+        "pages": [
+          "terms",
+          "refunds",
+          "acceptable-use"
+        ]
+      },
+      {
+        "group": "Privacy and data",
+        "pages": [
+          "privacy",
+          "cookies",
+          "data-processing",
+          "subprocessors"
+        ]
+      },
+      {
+        "group": "Help and versions",
+        "pages": [
+          "complaints"
+        ]
+      }
     ]
   },
   "navbar": {
-    "links": [{ "label": "Essal", "href": "https://essal.qa" }],
-    "primary": { "type": "button", "label": "Contact legal", "href": "mailto:legal@essal.it.com" }
+    "links": [
+      {
+        "label": "Essal",
+        "href": "https://essal.qa"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Contact legal",
+      "href": "mailto:legal@essal.it.com"
+    }
   },
   "footer": {
     "links": [
-      { "header": "Agreements", "items": [
-        { "label": "Terms", "href": "/terms" },
-        { "label": "Refunds", "href": "/refunds" },
-        { "label": "Acceptable use", "href": "/acceptable-use" }
-      ] },
-      { "header": "Privacy", "items": [
-        { "label": "Privacy policy", "href": "/privacy" },
-        { "label": "Cookies", "href": "/cookies" },
-        { "label": "Data processing", "href": "/data-processing" }
-      ] },
-      { "header": "Essal LLC · QFC 02195", "items": [
-        { "label": "Complaints and contacts", "href": "/complaints" },
-        { "label": "Policy versions", "href": "/changes" },
-        { "label": "Essal Work", "href": "https://essal.work" }
-      ] }
+      {
+        "header": "Agreements",
+        "items": [
+          {
+            "label": "Terms",
+            "href": "/terms"
+          },
+          {
+            "label": "Refunds",
+            "href": "/refunds"
+          },
+          {
+            "label": "Acceptable use",
+            "href": "/acceptable-use"
+          }
+        ]
+      },
+      {
+        "header": "Privacy",
+        "items": [
+          {
+            "label": "Privacy policy",
+            "href": "/privacy"
+          },
+          {
+            "label": "Cookies",
+            "href": "/cookies"
+          },
+          {
+            "label": "Data processing",
+            "href": "/data-processing"
+          }
+        ]
+      },
+      {
+        "header": "Essal LLC · QFC 02195",
+        "items": [
+          {
+            "label": "Complaints and contacts",
+            "href": "/complaints"
+          },
+          {
+            "label": "Essal Work",
+            "href": "https://essal.work"
+          }
+        ]
+      }
     ]
   },
-  "banner": { "content": "**Review draft.** These proposed policies are not yet effective. [Version information](/changes)", "dismissible": false, "type": "warning" },
-  "search": { "prompt": "Search policies" },
-  "contextual": { "options": ["copy"] },
-  "integrations": { "telemetry": { "enabled": false } },
-  "seo": { "metatags": { "robots": "noindex, nofollow", "canonical": "https://legal.essal.it.com" } },
+  "search": {
+    "prompt": "Search policies"
+  },
+  "contextual": {
+    "options": [
+      "copy"
+    ]
+  },
+  "integrations": {
+    "telemetry": {
+      "enabled": false
+    }
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://legal.essal.it.com"
+    }
+  },
   "redirects": [
-    { "source": "/refund-policy", "destination": "/refunds", "permanent": true },
-    { "source": "/privacy-policy", "destination": "/privacy", "permanent": true },
-    { "source": "/terms-of-service", "destination": "/terms", "permanent": true },
-    { "source": "/cookie-policy", "destination": "/cookies", "permanent": true },
-    { "source": "/complaints-handling-policy", "destination": "/complaints", "permanent": true }
+    {
+      "source": "/refund-policy",
+      "destination": "/refunds",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-service",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/cookies",
+      "permanent": true
+    },
+    {
+      "source": "/complaints-handling-policy",
+      "destination": "/complaints",
+      "permanent": true
+    }
   ]
 }

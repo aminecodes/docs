@@ -3,7 +3,7 @@
 This site belongs to Essal LLC (QFC 02195), trading as Essal and Essal Work. Intended host: legal.essal.it.com. Read `.mintlify/product-brief.md` and `release.json` before editing. Do not alter other deployments.
 
 - Never invent company details, locations, retention periods, security controls, certifications or review outcomes.
-- Drafts must retain a visible not-effective banner and noindex. Check `internal/launch-checklist.md`; do not complete approvals without evidence.
+- The owner requested a public presentation with no draft wording, no top banner, Maple theme, a larger logo and no Changes route. Preserve that presentation. Internal operational/legal verification statuses remain separate and must not be completed without evidence.
 - This source repository is public. Never commit credentials, customer data or the private licence certificate. `.mintignore` excludes internal files from the website, not from GitHub.
 - Before pushing, run `node scripts/check-release.mjs`, `mint validate --format json` and `mint broken-links --check-anchors --check-redirects`.
 - Run builds and browser verification sequentially on the 8 GB laptop; stop task-created preview servers and close test tabs after verification. Preserve unrelated processes.

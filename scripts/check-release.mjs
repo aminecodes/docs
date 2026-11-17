@@ -5,9 +5,9 @@ import assert from 'node:assert/strict';
 const root = process.cwd();
 const release = JSON.parse(fs.readFileSync(path.join(root, 'release.json'), 'utf8'));
 const config = JSON.parse(fs.readFileSync(path.join(root, 'docs.json'), 'utf8'));
-const slugs = ['index', 'terms', 'privacy', 'refunds', 'cookies', 'data-processing', 'subprocessors', 'acceptable-use', 'complaints', 'changes'];
+const slugs = ['index', 'terms', 'privacy', 'refunds', 'cookies', 'data-processing', 'subprocessors', 'acceptable-use', 'complaints'];
 const pages = slugs.map(slug => fs.readFileSync(path.join(root, `${slug}.mdx`), 'utf8'));
-assert.equal(new Set(slugs).size, 10);
+assert.equal(new Set(slugs).size, 9);
 for (const [i, page] of pages.entries()) {
   assert.match(page, /^---\r?\n/, `${slugs[i]}: missing frontmatter`);
   assert.match(page, /\ntitle: /, `${slugs[i]}: missing title`);
@@ -22,7 +22,19 @@ assert.match(pages[2], /30 days/);
 assert.match(pages[2], /legal@essal\.it\.com/);
 assert.equal(config.integrations.telemetry.enabled, false);
 assert.equal(config.contextual.options.includes('assistant'), false);
-if (release.mode === 'draft') {
+if (release.mode === 'published') {
+  assert.equal(release.presentationAuthorisedByOwner, true);
+  assert.match(release.publicationDate, /^\d{4}-\d{2}-\d{2}$/);
+  assert.equal(config.banner, undefined, 'The owner requested no top banner');
+  assert(!JSON.stringify(config.navigation).includes('changes'));
+  assert(!JSON.stringify(config.footer).includes('/changes'));
+  assert.match(fs.readFileSync(path.join(root, '.mintignore'), 'utf8'), /^changes\.mdx$/m);
+  for (const [i, page] of pages.entries()) {
+    assert(!/draft|proposed|not yet effective|unverified/i.test(page), `${slugs[i]} contains staging wording`);
+    assert(!page.includes('](/changes)'), `${slugs[i]} links to the hidden page`);
+    assert(!/\nnoindex: true\n/.test(page), `${slugs[i]} is still excluded from search`);
+  }
+} else if (release.mode === 'draft') {
   assert.equal(release.effectiveDate, null, 'A draft cannot have an effective date');
   assert.match(config.banner?.content ?? '', /draft.*not yet effective/i);
   assert.match(config.seo?.metatags?.robots ?? '', /noindex/);

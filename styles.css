@@ -1,0 +1,8 @@
+/* Enlarge the existing brand mark without changing its proportions or shifting navigation. */
+img.nav-logo {
+  height: 3rem !important;
+  width: auto !important;
+  max-width: min(11rem, 45vw);
+  aspect-ratio: 144.2 / 49.7;
+  object-fit: contain;
+}

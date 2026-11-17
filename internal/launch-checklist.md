@@ -1,5 +1,9 @@
 # Launch evidence and remaining gates
 
+## Latest owner direction
+
+On 18 November 2026 the owner requested Maple theme, a larger logo, removal of the orange banner and all public draft/staging wording, and hiding /changes. The source therefore publishes ordinary policy text with dated versions while preserving the actual verification status internally. This presentation instruction is not evidence of completed counsel review, transfer assessments, backup-erasure tests or Paddle approval. Do not change false approval fields to true without evidence. Keep legacy-host redirects and broader contractual migration separate from the presentation update until the transition is checked.
+
 Prepared 18 November 2026. This is operational evidence, not public policy text. Statuses below distinguish owner statements, source inspection and verified production behavior.
 
 ## Confirmed inputs
