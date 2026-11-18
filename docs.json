@@ -2,6 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Essal Legal Center",
+  "favicon": "/images/favicon.png",
   "description": "Agreements, privacy information and purchase policies for Essal LLC and Essal Work business software.",
   "colors": {
     "primary": "#0052CC",

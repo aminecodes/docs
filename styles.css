@@ -6,3 +6,8 @@ img.nav-logo {
   aspect-ratio: 144.2 / 49.7;
   object-fit: contain;
 }
+
+/* Keep the footer focused on Essal's policies and contact information. */
+#footer a[href*="utm_campaign=poweredBy"] {
+  display: none !important;
+}
